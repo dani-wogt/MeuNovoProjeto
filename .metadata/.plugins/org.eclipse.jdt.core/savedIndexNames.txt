@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+C:\Users\win8\Desktop\exerciciospr\.metadata\.plugins\org.eclipse.jdt.core
+2497617656.index
+1865797976.index
+206455352.index
+2942943496.index
+568772331.index

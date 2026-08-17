@@ -1,0 +1,14 @@
+package eloisaatividades;
+
+public class Atividade2 {
+
+	public static void main(String[] args) {
+		String nome = "Livro";
+		int codigo = 1672980;
+		double preco= 58.99;
+		int quantidade = 67;
+		
+		System.out.println("prooduto: "+livro+"\ncodigo do produto: "+codigo+"preço do produto"+preco+"quantidade em estoque: "+quantidade);
+	}
+
+}
