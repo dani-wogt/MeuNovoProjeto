@@ -1,0 +1,38 @@
+package exercicios_condicionais_if;
+
+import java.util.Scanner;
+
+public class Exercicio17 {
+
+	public static void main(String[] args) {
+
+		Scanner entrada = new Scanner(System.in);
+		
+		String usuario = "admin";
+		String senha = "1234";
+		
+		System.out.println("Informe o usuário: ");
+		String usu = entrada.next();
+		
+		System.out.println("Informe a senha: ");
+		String falso = entrada.next();
+		
+		if(usu != usuario) {
+			System.out.println("Usuário Inexistente");
+		}
+		else if(usu == usuario) {
+			System.out.println("Informe a senha: ");
+			String certo = entrada.next();
+			
+			if(certo==senha) {
+				System.out.println("Acesso permitido");
+			}
+			else {
+				System.out.println("Senha incorreta");
+			}
+		}
+		
+
+	}
+
+}
