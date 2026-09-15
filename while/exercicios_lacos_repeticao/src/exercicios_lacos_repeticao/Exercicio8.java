@@ -1,0 +1,28 @@
+package exercicios_lacos_repeticao;
+
+import java.util.Scanner;
+
+public class Exercicio8 {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		int soma = 0;
+		int cont = 1;
+		
+		System.out.println("Digite 5 números inteiros:");
+
+        while (cont <= 5) {
+            System.out.print("Número"+cont+" : ");
+            int numero = entrada.nextInt();
+            soma += numero;
+            
+            cont++;
+        }
+
+        System.out.println("A soma de todos os números é: "+soma);
+
+	}
+
+}
