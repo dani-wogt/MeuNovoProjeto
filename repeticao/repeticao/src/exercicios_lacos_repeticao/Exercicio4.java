@@ -1,0 +1,25 @@
+package exercicios_lacos_repeticao;
+
+import java.util.Scanner;
+
+public class Exercicio4 {
+
+	public static void main(String[] args) {
+		
+		 Scanner entrada = new Scanner(System.in);
+		 
+		 System.out.println("Digite um numero: ");
+		 int num = entrada.nextInt();
+		 
+		 int cont = 1;
+		 
+		 while(cont <= 10) {
+			 int resul = num*cont;
+			
+			 System.out.println(num+" X "+cont+" = "+resul);
+			 cont++;
+		 }
+
+	}
+
+}

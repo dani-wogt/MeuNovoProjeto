@@ -1,0 +1,42 @@
+package exercicios_lacos_repeticao;
+
+import java.util.Scanner;
+
+public class Exercicio9 {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		int opcao;
+		
+		do{
+			System.out.println("Escolha uma opção: ");
+            System.out.println("1 para Cadastrar");
+            System.out.println("2 para Consultar");
+            System.out.println("3 para Excluir");
+            System.out.println("0 para Sair");
+            
+            opcao = entrada.nextInt();
+            
+            switch (opcao) {
+            case 1:
+                System.out.println("Cadastrar");
+                break;
+            case 2:
+                System.out.println("Consultar");
+                break;
+            case 3:
+                System.out.println("Excluir");
+                break;
+            case 0:
+                System.out.println("Programa encerrado");
+                break;
+            default:
+                System.out.println("Opção inválida");
+                break;
+        }
+		}while (opcao !=0);
+	}
+
+}

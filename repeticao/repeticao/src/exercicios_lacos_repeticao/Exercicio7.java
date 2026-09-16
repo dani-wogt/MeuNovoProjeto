@@ -1,0 +1,28 @@
+package exercicios_lacos_repeticao;
+
+import java.util.Scanner;
+
+public class Exercicio7 {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		String senhaCerta = "1234";
+		String senha;
+		
+		do {
+		System.out.println("Digite a senha: ");
+		senha = entrada.nextLine();
+		
+		if (!senha.equals(senhaCerta)) {
+            System.out.println("Senha errada, tente novamente.");
+        }
+		
+	} while (!senha.equals(senhaCerta));
+
+    System.out.println("Senha correta!");
+
+	}
+
+}
