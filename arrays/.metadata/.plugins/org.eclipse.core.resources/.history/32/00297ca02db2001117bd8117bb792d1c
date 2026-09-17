@@ -1,0 +1,52 @@
+package arrays;
+
+import java.util.Scanner;
+
+public class Ex3segundaparte {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+        
+         int[][] estoque = new int[3][4];
+        
+        int[] totalPorProduto = new int[3];
+        int estoqueTotalGeral = 0;
+        
+      
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Produto " + (i + 1) + ":");
+            
+        for (int j = 0; j < 4; j++) {
+                System.out.print("  Período " + (j + 1) + ": ");
+                estoque[i][j] = entrada.nextInt();
+            }
+        }
+        int maiorEstoque = -1;
+        int produtoMaiorEstoque = 0;
+        
+        for (int i = 0; i < 3; i++) {
+            int somaProduto = 0;
+            for (int j = 0; j < 4; j++) {
+                somaProduto += estoque[i][j];
+            }
+           totalPorProduto[i] = somaProduto;
+            
+           estoqueTotalGeral += somaProduto;
+            
+            if (somaProduto > maiorEstoque) {
+                maiorEstoque = somaProduto;
+                produtoMaiorEstoque = i + 1; // +1 apenas para exibição (Produto 1, 2 ou 3)
+            }
+        }
+        
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Produto "+(i+1)+": "+totalPorProduto[i]+" unidades");
+        }
+        
+        System.out.println("Estoque total: "+estoqueTotalGeral+" unidades");
+        System.out.println("Maior estoque acumulado: Produto "+produtoMaiorEstoque);
+
+	}
+
+}

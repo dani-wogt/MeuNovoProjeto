@@ -1,0 +1,63 @@
+package arrays;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Exercicio5segundaparte {
+
+	public static void main(String[] args) {
+		 Locale.setDefault(Locale.US);
+	        Scanner sc = new Scanner(System.in);
+
+	        double[] valores = new double[10];
+
+	       System.out.println("Digite 10 números reais:");
+	        for (int i = 0; i < valores.length; i++) {
+	        	
+	            System.out.print("Valor " + (i + 1) + ": ");
+	            valores[i] = sc.nextDouble();
+	        }
+
+	        double soma = 0;
+	        double maior = valores[0];
+	        double menor = valores[0];
+
+	       for (double valor : valores) {
+	            soma += valor;
+
+	            if (valor > maior) {
+	                maior = valor;
+	            }
+	            if (valor < menor) {
+	                menor = valor;
+	            }
+	        }
+
+	        double media = soma / valores.length;
+
+	        int acimaDaMedia = 0;
+	        for (double valor : valores) {
+	            if (valor > media) {
+	                acimaDaMedia++;
+	            }
+	        }
+
+	        System.out.print("A Todos os valores: ");
+	        for (double valor : valores) {
+	            System.out.print(valor+" ");
+	        }
+	        
+	        System.out.printf("B Soma dos valores: %.2f\n", soma);
+	        System.out.printf("C Média: %.2f\n", media);
+	        System.out.printf("D Maior valor: %.2f\n", maior);
+	        System.out.printf("E Menor valor: %.2f\n", menor);
+	        System.out.println("F Quantidade acima da média: "+acimaDaMedia);
+	        
+	      //resposta
+	     //no for tradicional, a gente declara uma variável de controle por ex: 'int i = 0' e incrementamos a cada iteraçao pra conseguir acessar a posiçao certa da memoria ('valores[i]')
+	         
+	    //ai no for-each, o java vai tipo gerenciar o indice de uma forma oculta e automatica , e vamos receber o elemento do array dentro da variável local, double valor, sem preciasar manipular o indice i
+	       
+	}
+
+}

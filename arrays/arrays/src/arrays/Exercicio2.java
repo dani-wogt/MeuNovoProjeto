@@ -1,0 +1,41 @@
+package arrays;
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+		
+		int[] num = {15,8,32,4,21,17,9,40,12,6};
+
+        int maiorV = num[0];
+        int posMaior = 0;
+        
+        int menorV = num[0];
+        int posMenor = 0;
+        
+        System.out.println("Valores:");
+        for (int i = 0; i < num.length; i++) {
+            System.out.print(num[i] + " ");
+        }
+        System.out.println();
+        
+        for (int i = 1; i < num.length; i++) {
+           
+            if (num[i] > maiorV) {
+                maiorV = num[i];
+                posMaior = i;
+            }
+            
+            if (num[i] < menorV) {
+                menorV = num[i];
+                posMenor = i;
+            }
+        }
+        
+        System.out.println("O maior valor é: "+maiorV);
+        System.out.println("A posição do maior valor é: "+posMaior);
+        System.out.println("O menor valor é: "+menorV);
+        System.out.println("A posição do menor valor é: "+posMenor);
+
+	}
+
+}
